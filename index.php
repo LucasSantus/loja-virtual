@@ -36,7 +36,6 @@
                             <li><a href="?pg=inicio">Dashboard</a></li>
                             <li><a href="?pg=sobre">Sobre</a></li>
                             <li><a href="?pg=contato/form">Contato</a></li>
-                            <!-- <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li> -->
                             <li><a href="?pg=login/form"><i class="material-icons right">login</i>Login</a></li>
                         <?php
                             }

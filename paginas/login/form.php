@@ -16,18 +16,27 @@
                                 <form class="col s12" method="POST" action="?pg=login/processar">
                                     <div class="row">
                                         <div class="input-field col s12 m12 l12 xl12">
-                                            <input id="nome" name="nome" type="text" class="validate" required>
-                                            <label for="nome">Nome:</label>
+                                            <input id="email" name="email" type="email" class="validate" required>
+                                            <label for="email">E-mail:</label>
                                         </div>
 
                                         <div class="input-field col s12 m12 l12 xl12">
-                                            <input id="senha" name="senha"  type="password" class="validate" required>
+                                            <input id="senha" name="senha" type="password" class="validate" required>
                                             <label for="senha">Senha:</label>
                                         </div>
                                     </div>
 
                                     <div class="center">
                                         <button class="waves-effect waves-light btn deep-orange" type="submit"><i class="material-icons right">send</i>ENVIAR</button>
+                                    </div>
+
+                                    <div id="format_link_cadastro" class="center">
+                                        <span>
+                                            Ainda não se cadastrou no sistema?
+                                            <a href="?pg=usuario/cadastrar">
+                                                cadastrar
+                                            </a>
+                                        </span>
                                     </div>
                                 </form>
                             </div>

@@ -1,6 +1,6 @@
 <div id="div-form">
     <h2>Cadastrar Usuário</h2>
-    <form method="POST" action="?pg=usuario/processar_usuario">
+    <form method="POST" action="?pg=usuario/processar">
         <div>
             <label>Nome:</label>
             <input type="text" name="nome" placeholder="Insira o Nome..." required/>

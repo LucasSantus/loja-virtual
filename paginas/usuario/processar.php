@@ -4,11 +4,19 @@ if(!empty($_POST)){
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];
     $senha = $_POST["senha"];
-    // $data_hora_criacao = date('Y-m-d H:i:s');
+    $data_hora_cadastro = date('Y-m-d H:i:s');
 
     # Insert no banco de dados
-    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, telefone, senha) VALUES (:nome, :email, :telefone, :senha)");
-    $bind_param = ["nome" => $nome, "email" => $email, "telefone" => $telefone ,"senha" => md5($senha)];
+    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, telefone, senha, data_hora_cadastro) VALUES (:nome, :email, :telefone, :senha, :data_hora_cadastro)");
+    
+    $bind_param = [
+        "nome" => $nome,
+        "email" => $email,
+        "telefone" => $telefone,
+        "senha" => md5($senha),
+        "data_hora_cadastro" => $data_hora_cadastro,
+    ];
+
     try {
         $conn->beginTransaction();
         $stmt->execute($bind_param);
