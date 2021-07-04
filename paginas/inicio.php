@@ -12,8 +12,6 @@
 </head>
 <div>
     <h3 class="center">Produtos</h3>
-
-
 </div>
 
 <?php
@@ -25,7 +23,6 @@
 <?php
     }
 ?>
-
 
 <div class="container">
     <table>

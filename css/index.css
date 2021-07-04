@@ -8,3 +8,9 @@ main {
     flex: 1 0 auto;
 }
 
+
+
+.format_card .card{
+    margin-top: 10%;
+    padding: 5%;
+}
