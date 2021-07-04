@@ -13,7 +13,7 @@ if(!empty($_POST)){
         $_SESSION["email"]=$info['email'];
         $_SESSION["telefone"]=$info['telefone'];
         $_SESSION["id"] = $info['id'];
-    header("Location: ?pg=inicio");
+        header("Location: ?pg=inicio");
     }else{
         echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
     }

@@ -8,30 +8,37 @@ $sql = "SELECT co.id, co.nome, co.telefone, co.email, co.mensagem, uf.sigla AS e
 $result = $conn->query($sql, PDO::FETCH_ASSOC);
 ?>
 
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Telefone</th>
-        <th>E-mail</th>
-        <th>Mensagem</th>
-        <th>Estado</th>
-        <th>Cidade</th>
-        <th>Data/Hora</th>
-    </tr>
-    <?php
-        while($linha = $result->fetch()){
-    ?>
+<h3 class="center">Lista de Contatos</h3>
+
+<div class="row container">
+    <table class="format_table">
         <tr>
-            <?php 
-                foreach($linha as $chave => $valor){
-            ?>
-                <td><?= $valor ?></td>
-            <?php
-                }
-            ?>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Mensagem</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+            <th>Data/Hora</th>
         </tr>
-    <?php
-        }
-    ?>
-</table>
+        <?php
+            while($linha = $result->fetch()){
+        ?>
+            <tr>
+                <?php 
+                    foreach($linha as $chave => $valor){
+                ?>
+                    <td><?= $valor ?></td>
+                <?php
+                    }
+                ?>
+            </tr>
+        <?php
+            }
+        ?>
+    </table>
+    <div class="right">
+        <a href="?pg=contato/form" class="waves-effect waves-light btn deep-orange">ADICIONAR</a>
+    </div>
+</div>
