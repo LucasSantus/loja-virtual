@@ -12,9 +12,11 @@
     <head>
         <meta charset="UTF-8">
         
-        <!-- <link rel="stylesheet" type="text/css" href="css/estilo.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!-- Let browser know website is optimized for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -27,63 +29,47 @@
     </head>
 
     <body>
-        
-            <header>
-                <nav>
-                    <div class="nav-wrapper container">
-                        <a href="?pg=inicio" class="brand-logo">Logo</a>
-                        <ul class="right hide-on-med-and-down">
-                            <?php
-                                if(!isset($_SESSION["nome"])){
-                            ?>
-                                <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li>
-                                <li><a href="?pg=login/formulario">Login</a></li>
-                            <?php
-                                }
-                                else{
-                            ?>
-                                <li><a href="?pg=curriculo/curriculos">Currículos</a></li>
-                                <li><a href="?pg=login/limpar_sessao">Sair</a></li>
-                            <?php
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
-            <main>
-                <?php
-                    $pg = (isset($_GET["pg"]) && !empty($_GET["pg"])) ? $_GET["pg"] : "inicio";
-                    include("paginas/".$pg.".php");
-                ?>
-            </main>
-
-            <footer class="page-footer">
-                <div class="container">
-                    <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                    </div>
+        <header>
+            <nav>
+                <div class="nav-wrapper container">
+                    <a href="?pg=inicio" class="brand-logo">Loja Virtual</a>
+                    <ul class="right hide-on-med-and-down">
+                        <?php
+                            if(!isset($_SESSION["nome"])){
+                        ?>
+                            <li><a href="?pg=login/formulario">Dashboard</a></li>
+                            <li><a href="?pg=login/formulario">Sobre</a></li>
+                            <li><a href="?pg=login/formulario">Contato</a></li>
+                            <!-- <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li> -->
+                            <li><a href="?pg=login/formulario"><i class="material-icons right">login</i>Login</a></li>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <li><a href="?pg=curriculo/curriculos">Currículos</a></li>
+                            <li><a href="?pg=login/limpar_sessao">Sair</a></li>
+                        <?php
+                            }
+                        ?>
+                    </ul>
                 </div>
-                <div class="footer-copyright">
-                    <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                    </div>
+            </nav>
+        </header>
+
+        <main>
+            <?php
+                $pg = (isset($_GET["pg"]) && !empty($_GET["pg"])) ? $_GET["pg"] : "inicio";
+                include("paginas/".$pg.".php");
+            ?>
+        </main>
+
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container center">
+                © 2021 Copyright Loja Virtual, Todos os Direitos Reservados.
                 </div>
-            </footer>
+            </div>
+        </footer>
         
         <!-- Import Java Script Personalizado -->
         <script src="js/materialize.min.js" defer></script>
