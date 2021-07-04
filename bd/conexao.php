@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'mysql:dbname=prova_va3;host=localhost;charset=utf8';
+$dsn = 'mysql:dbname=loja_virtual;host=localhost;charset=utf8';
 $user = 'root';
 $password = '';
 

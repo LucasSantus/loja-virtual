@@ -1,17 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-session_start();
-require("bd/conexao.php");
-date_default_timezone_set('America/Sao_Paulo');
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    session_start();
+    require("bd/conexao.php");
+    date_default_timezone_set('America/Sao_Paulo');
+
 ?>
 <html>
-
     <head>
         <meta charset="UTF-8">
-        <title>Site</title>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        
+        <!-- <link rel="stylesheet" type="text/css" href="css/estilo.css" /> -->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Let browser know website is optimized for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+        <!-- Title WebSite -->
+        <title>Loja Virtual</title>
     </head>
 
     <body>
@@ -50,5 +62,8 @@ date_default_timezone_set('America/Sao_Paulo');
                 <h4>Copyright &copy; 2021 - Programação e Design Para WEB - Lucas Eduardo de Oliveira Santos</h4>
             </footer>
         </div>
+
+        <!-- Import Java Script Personalizado -->
+        <script src="js/materialize.min.js" defer></script>
     </body>
 </html>
