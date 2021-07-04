@@ -23,9 +23,6 @@
         
         <!-- Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-
-        <!-- Title WebSite -->
-        <title>Loja Virtual</title>
     </head>
 
     <body>
@@ -37,9 +34,9 @@
                         <?php
                             if(!isset($_SESSION["nome"])){
                         ?>
-                            <li><a href="?pg=login/formulario">Dashboard</a></li>
-                            <li><a href="?pg=login/formulario">Sobre</a></li>
-                            <li><a href="?pg=login/formulario">Contato</a></li>
+                            <li><a href="?pg=inicio">Dashboard</a></li>
+                            <li><a href="?pg=sobre">Sobre</a></li>
+                            <li><a href="?pg=contato">Contato</a></li>
                             <!-- <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li> -->
                             <li><a href="?pg=login/formulario"><i class="material-icons right">login</i>Login</a></li>
                         <?php
