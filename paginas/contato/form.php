@@ -46,12 +46,9 @@
                                         <label for="mensagem">Mensagem:</label>
                                     </div>
                                 </div>
-
-                                <!-- <?php
-                                    echo $_GET["telefone"];
-                                ?> -->
+                                
                                 <div class="center">
-                                    <button class="waves-effect waves-light btn deep-orange" type="submit"><i class="material-icons right">send</i>ENVIAR</button>
+                                    <button class="waves-effect waves-light btn deep-orange" type="submit">ENVIAR</button>
                                 </div>
                             </form>
                         </div>

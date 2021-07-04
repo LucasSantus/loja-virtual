@@ -1,3 +1,4 @@
+/* Posicionamento do Footer na Parte Inferior da Tela*/
 body {
     display: flex;
     min-height: 100vh;
@@ -8,11 +9,29 @@ main {
     flex: 1 0 auto;
 }
 
+/* Estilização dos Cards */
 .format_card .card{
-    margin-top: 10%;
-    padding: 5%;
+    margin-top: 12%;
+    padding-top: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 2%;
+}
+
+/* Estilização dos Botões */
+.format_card a{
+    margin-top: 10px;
+}
+
+.format_card button{
+    margin-top: 10px;
 }
 
 #format_link_cadastro{
     margin-top: 10px;
+}
+
+#format_link_cadastro span{
+    font-size: 17px;
+    font-weight: bold;
 }

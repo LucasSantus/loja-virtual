@@ -27,7 +27,7 @@
                                     </div>
 
                                     <div class="center">
-                                        <button class="waves-effect waves-light btn deep-orange" type="submit"><i class="material-icons right">send</i>ENVIAR</button>
+                                        <button class="waves-effect waves-light btn deep-orange" type="submit">ENTRAR</button>
                                     </div>
 
                                     <div id="format_link_cadastro" class="center">

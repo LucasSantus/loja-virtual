@@ -1,23 +1,46 @@
-<div id="div-form">
-    <h2>Cadastrar Usuário</h2>
-    <form method="POST" action="?pg=usuario/processar">
-        <div>
-            <label>Nome:</label>
-            <input type="text" name="nome" placeholder="Insira o Nome..." required/>
-        </div>
-        <div>
-            <label>E-mail:</label>
-            <input type="email" name="email" placeholder="Insira o E-mail..." required/>
-        </div>
-        <div>
-            <label>Telefone:</label>
-            <input type="text" name="telefone" placeholder="Insira o Telefone..." required/>
-        </div>
-        <div>
-            <label>Senha:</label>
-            <input type="password" name="senha" placeholder="Insira a Senha..." required/>
-        </div>
-        <button type="submit">REGISTRAR</button>
-    </form>
+
+<div class="container format_card">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card z-depth-5">
+                        <div class="card-content">
+                            <h3 class="center">Cadastrar</h3>
+                            <div class="row">
+                                <form class="col s12" method="POST" action="?pg=usuario/processar">
+                                    <div class="row">
+                                        <div class="input-field col s12 m12 l12 xl12">
+                                            <input id="nome" name="nome" type="text" class="validate" required/>
+                                            <label for="nome">Nome:</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m12 l12 xl12">
+                                            <input id="email" name="email" type="email" class="validate" required>
+                                            <label for="email">E-mail:</label>
+                                        </div>
+        
+                                        <div class="input-field col s12 m12 l12 xl12">
+                                            <input id="telefone" name="telefone" type="text" class="validate" required/>
+                                            <label for="telefone">Telefone:</label>
+                                        </div>
     
-<div>
+                                        <div class="input-field col s12 m12 l12 xl12">
+                                            <input id="senha" name="senha" type="password" class="validate" required>
+                                            <label for="senha">Senha:</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="center">
+                                        <a href="?pg=login/form" class="waves-effect waves-light btn deep-orange">VOLTAR</a>
+                                        <button class="waves-effect waves-light btn deep-orange" type="submit">SALVAR</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
