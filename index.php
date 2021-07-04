@@ -27,29 +27,30 @@
     </head>
 
     <body>
-        <div class="container">
+        
             <header>
-                <h1>Meu site</h1>
+                <nav>
+                    <div class="nav-wrapper container">
+                        <a href="?pg=inicio" class="brand-logo">Logo</a>
+                        <ul class="right hide-on-med-and-down">
+                            <?php
+                                if(!isset($_SESSION["nome"])){
+                            ?>
+                                <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li>
+                                <li><a href="?pg=login/formulario">Login</a></li>
+                            <?php
+                                }
+                                else{
+                            ?>
+                                <li><a href="?pg=curriculo/curriculos">Currículos</a></li>
+                                <li><a href="?pg=login/limpar_sessao">Sair</a></li>
+                            <?php
+                                }
+                            ?>
+                        </ul>
+                    </div>
+                </nav>
             </header>
-            <div class="menu">
-                <ul>
-                    <a href="?pg=inicio"><li>Dashboard</li></a>
-                    <?php 
-                        if(!isset($_SESSION["nome"])){
-                    ?>
-                        <a href="?pg=usuario/cadastrar_usuario"><li>Cadastrar</li></a>
-                        <a href="?pg=login/formulario"><li>Login</li></a>
-                    <?php
-                        }
-                        else{
-                    ?>
-                        <a href="?pg=curriculo/curriculos"><li>Currículos</li></a>
-                        <a href="?pg=login/limpar_sessao"><li>Sair</li></a>
-                    <?php
-                        }
-                    ?>
-                </ul>
-            </div>
 
             <main>
                 <?php
@@ -58,11 +59,32 @@
                 ?>
             </main>
 
-            <footer>
-                <h4>Copyright &copy; 2021 - Programação e Design Para WEB - Lucas Eduardo de Oliveira Santos</h4>
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
+                </div>
             </footer>
-        </div>
-
+        
         <!-- Import Java Script Personalizado -->
         <script src="js/materialize.min.js" defer></script>
     </body>
