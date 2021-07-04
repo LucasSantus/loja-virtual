@@ -37,11 +37,12 @@
                             <li><a href="?pg=sobre">Sobre</a></li>
                             <li><a href="?pg=contato/form">Contato</a></li>
                             <!-- <li><a href="?pg=usuario/cadastrar_usuario">Cadastrar</a></li> -->
-                            <li><a href="?pg=login/formulario"><i class="material-icons right">login</i>Login</a></li>
+                            <li><a href="?pg=login/form"><i class="material-icons right">login</i>Login</a></li>
                         <?php
                             }
                             else{
                         ?>
+                            <li><a href="?pg=contato/contatos">Contato</a></li>
                             <li><a href="?pg=curriculo/curriculos">Currículos</a></li>
                             <li><a href="?pg=login/limpar_sessao">Sair</a></li>
                         <?php
