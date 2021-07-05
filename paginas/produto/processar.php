@@ -6,12 +6,18 @@ if(!empty($_POST)){
     $nome = $_POST["nome"];
     $imagem = $_POST["imagem"];
     $categoria = $_POST["categoria"];
+    $data_hora_cadastro = date('Y-m-d H:i:s');
    
-
-    $stmt = $conn->prepare("INSERT INTO itens (nome,descricao, foto, id_categoria) 
-    VALUES (:nome, :descricao, :imagem, :categoria)");
+    $stmt = $conn->prepare("INSERT INTO produtos (nome, descricao, foto, idcategoria, data_hora_cadastro) 
+    VALUES (:nome, :descricao, :imagem, :idcategoria, :data_hora_cadastro)");
    
-    $bind_param = ["nome" => $nome, "descricao" => $descricao, "imagem" => $imagem, "categoria" => $categoria];
+    $bind_param = [
+        "nome" => $nome, 
+        "descricao" => $descricao, 
+        "imagem" => $imagem, 
+        "idcategoria" => $categoria,
+        "data_hora_cadastro" => $data_hora_cadastro
+    ];
     
     try {
         $conn->beginTransaction();

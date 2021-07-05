@@ -1,4 +1,4 @@
-/* Posicionamento do Footer na Parte Inferior da Tela*/
+/* Posicionamento do Footer na Parte Inferior da Tela */
 body {
     display: flex;
     min-height: 100vh;
@@ -7,6 +7,19 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+/* Estilização da Barra de Rolagem */
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #bdbdbd;
 }
 
 /* Estilização dos Cards */

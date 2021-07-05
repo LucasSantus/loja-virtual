@@ -6,7 +6,7 @@
                 <div class="col s12">
                     <div class="card z-depth-5">
                         <div class="card-content">
-                            <h3 class="center">Cadastrar</h3>
+                            <h3 class="center">Novo Usuário</h3>
                             <div class="row">
                                 <form class="col s12" method="POST" action="?pg=usuario/processar">
                                     <div class="row">
