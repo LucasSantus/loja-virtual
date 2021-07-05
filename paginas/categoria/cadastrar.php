@@ -1,3 +1,10 @@
+
+<head>
+    <title>
+        Categoria | Loja Virtual
+    </title>
+</head>
+
 <div class="container format_card">
     <div class="container">
         <div class="container">

@@ -22,3 +22,9 @@ else{
     header("Location: ?pg=login/formulario");
 }
 ?>
+
+<head>
+    <title>
+        Processar | Loja Virtual
+    </title>
+</head>

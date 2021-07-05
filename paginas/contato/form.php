@@ -3,6 +3,12 @@
     $resultCidades = $conn->query($sqlCidades, PDO::FETCH_ASSOC);
 ?>
 
+<head>
+    <title>
+        Contato | Loja Virtual
+    </title>
+</head>
+
 <div class="container format_card">
     <div class="container">
         <div class="row">

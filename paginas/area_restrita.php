@@ -5,7 +5,7 @@
 </head>
 
 <div class="container center">
-    <h2>Área restrita</h2>
+    <h3>Área restrita</h3>
     <br>
     <h5>Bem-vindo(a), <?= $_SESSION["nome"] ?>!</h5>
     <br>

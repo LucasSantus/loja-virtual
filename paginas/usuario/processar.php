@@ -28,8 +28,14 @@
             echo '<div class="msg-cadastro-contato msg-cadastro-erro">Não foi possível cadastrar o usuário -> ' . $e->getMessage() . '</div>';
         }
     }
-
 ?>
+
+<head>
+    <title>
+        Processar | Loja Virtual
+    </title>
+</head>
+
 <div id="btn-limpar-sessao">
     <a href="?pg=inicio">Voltar</a>
 </div>

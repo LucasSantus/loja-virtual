@@ -7,10 +7,8 @@ if(!empty($_POST)){
     $imagem = $_POST["imagem"];
     $categoria = $_POST["categoria"];
     $data_hora_cadastro = date('Y-m-d H:i:s');
-   
     $stmt = $conn->prepare("INSERT INTO produtos (nome, descricao, foto, idcategoria, data_hora_cadastro) 
     VALUES (:nome, :descricao, :imagem, :idcategoria, :data_hora_cadastro)");
-   
     $bind_param = [
         "nome" => $nome, 
         "descricao" => $descricao, 
@@ -33,6 +31,12 @@ if(!empty($_POST)){
 }
 
 ?>
+
+<head>
+    <title>
+        Processar | Loja Virtual
+    </title>
+</head>
 
 <div id="btn-limpar-sessao">
     <a href="?pg=itens/cadastrar_itens">Voltar</a>

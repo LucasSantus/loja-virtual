@@ -3,6 +3,12 @@
     $resultCategorias = $conn->query($sqlCategorias, PDO::FETCH_ASSOC);
 ?>
 
+<head>
+    <title>
+        Produto | Loja Virtual
+    </title>
+</head>
+
 <div class="container format_card">
     <div class="container">
         <div class="container">
@@ -26,6 +32,7 @@
                                         <div class="input-field col s12 m12 l12 xl12">
                                             <input id="imagem" name="imagem" type="text" class="validate" required>
                                             <label for="imagem">Imagem:</label>
+                                            <span class="helper-text" data-success="right">Insira o Link da Imagem</span>
                                         </div>
 
                                         <div name="categoria" class="input-field col s12 m12 l12 xl12">

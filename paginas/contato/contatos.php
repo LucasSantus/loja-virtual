@@ -8,6 +8,12 @@ $sql = "SELECT co.id, co.nome, co.telefone, co.email, co.mensagem, uf.sigla AS e
 $result = $conn->query($sql, PDO::FETCH_ASSOC);
 ?>
 
+<head>
+    <title>
+        Lista de Contatos | Loja Virtual
+    </title>
+</head>
+
 <h3 class="center">Lista de Contatos</h3>
 
 <div class="row container">
