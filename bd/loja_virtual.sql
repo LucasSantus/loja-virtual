@@ -28,7 +28,7 @@ CREATE TABLE `categorias` (
   `data_hora_criacao` datetime NOT NULL DEFAULT current_timestamp(),
   `descricao` varchar(255) NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'Bebidas','2021-06-30 08:45:57','2021-06-30 08:45:57'),(2,'Frutas','2021-06-30 08:46:13','2021-06-30 08:46:13'),(3,'Sapato','2021-07-04 23:57:03','Colocar no pé');
+INSERT INTO `categorias` VALUES (5,'Bebidas','2021-07-05 20:29:28','Categoria de Bebidas'),(6,'Limpeza','2021-07-05 20:29:44','Categoria de Produtos de Limpeza'),(7,'Blusas','2021-07-05 20:30:15','Categoria de Produtos de Blusas de Frio ');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `contatos` (
   PRIMARY KEY (`id`),
   KEY `contatos_FK` (`cidade_id`),
   CONSTRAINT `contatos_FK` FOREIGN KEY (`cidade_id`) REFERENCES `cidades` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `contatos` (
 
 LOCK TABLES `contatos` WRITE;
 /*!40000 ALTER TABLE `contatos` DISABLE KEYS */;
-INSERT INTO `contatos` VALUES (3,'Lucas Santus','(35) 9 9877-8549','admin@admin.com','Olá ',4,'2021-07-04 13:13:26'),(4,'Lucas Santus','(35) 9 9877-8549','admin@admin.com','Olá ',4,'2021-07-04 13:14:09'),(5,'test','d354','dasd@fdjj.com','gdfhghsdf',1,'2021-07-04 18:40:17'),(6,'hfg','hfghfd','hfg@gmail.com','fghjjhdgf',1,'2021-07-04 18:45:01'),(7,'hfg','hfghfd','hfg@gmail.com','fghjjhdgf',1,'2021-07-04 18:45:35'),(8,'fgdsgdf','fgsdgdfg','email@gmail.com','hgdhfsd',2,'2021-07-04 18:46:03'),(10,'hfgdh','fghdhsd','fdsg@gmail.com','gsdfgds',1,'2021-07-04 18:47:38'),(11,'hfgdh','fghdhsd','fdsg@gmail.com','gsdfgds',1,'2021-07-04 18:48:36'),(12,'hfgdhd','hdfghd','email@gmail.com','hfgdhdf',1,'2021-07-04 18:48:46'),(13,'GFDSGSDF','HFG','email@gmail.com','HGFSHDF',3,'2021-07-04 18:50:33'),(14,'fsdf','jfgh','fdsg@gmail.com','gdfsgs',2,'2021-07-04 18:50:59'),(15,'gfdgs','hfgsdhgfs','hfg@gmail.com','fgshfsdg',1,'2021-07-04 18:51:43'),(16,'gshdfgsdh','hgfdh','email@gmail.com','sdfghdsfh',2,'2021-07-04 18:52:48'),(17,'gshdfgsdh','hgfdh','email@gmail.com','sdfghdsfh',2,'2021-07-04 18:53:04');
+INSERT INTO `contatos` VALUES (18,'Jubileu pipoca','(35) 9 9745-8649','pipoca_jubileu@gmail.com','Boa Tarde!',3,'2021-07-05 20:31:02'),(19,'Lucas Santos','(35) 99877-8549','leos9877@gmail.com','Olá!',4,'2021-07-05 20:33:02');
 /*!40000 ALTER TABLE `contatos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,7 +141,7 @@ CREATE TABLE `produtos` (
   PRIMARY KEY (`id`),
   KEY `produtos_categorias_idx` (`idcategoria`),
   CONSTRAINT `produtos_categorias` FOREIGN KEY (`idcategoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (1,'Coca','Cocacola 2l','foto_produto_1','2021-06-30 08:52:50',1),(2,'Sapato','Calçado','https://www.onthewall.com.br/blog/o-t-w/uploads/2020/10/fotos-pontos-turisticos-03.png','2021-07-05 00:13:40',1);
+INSERT INTO `produtos` VALUES (3,'Guaraná Antartida 350ML','Refrigerante','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjjPM5LcWuqSlUDQGs33vZ6h0m0xX9tVtzFw&usqp=CAU','2021-07-05 20:35:33',5),(4,'Desinfetante','Para limpeza do banheiro','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSICoOCpit5iQmVHcUj5JkKIX7AVSuT3G5uCQ&usqp=CAU','2021-07-05 20:40:54',6);
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,4 +192,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-05  0:39:53
+-- Dump completed on 2021-07-05 20:45:01
