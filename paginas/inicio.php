@@ -1,16 +1,20 @@
 <?php
-    if(isset($_GET['busca'])) {
-        $nome = "%".trim($_GET['busca'])."%";
-        $sth = $conn->prepare('SELECT * FROM `produtos` WHERE `nome` LIKE :nome');
+    if(isset($_POST['busca'])) {
+        $nome = "%".trim($_POST['busca'])."%";
+        $sth = $conn->prepare('SELECT produtos.id, produtos.nome, produtos.descricao, produtos.foto, categorias.nome as categoria_nome FROM produtos 
+        INNER JOIN categorias ON categorias.id = produtos.idcategoria where produtos.nome like :nome or produtos.descricao like :nome
+            or produtos.id like :nome or categorias.nome like :nome ORDER BY produtos.id DESC ');
         $sth->bindParam(':nome', $nome, PDO::PARAM_STR);
         $sth->execute();
-        
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     }
     else{
-        $sql = "SELECT * FROM produtos ORDER BY data_hora_cadastro DESC";
-        $result = $conn->query($sql, PDO::FETCH_ASSOC);    
+        $sql = "SELECT produtos.id, produtos.nome, produtos.descricao, produtos.foto, categorias.nome as categoria_nome FROM produtos 
+        INNER JOIN categorias ON categorias.id = produtos.idcategoria ORDER BY produtos.id DESC";
+        $result = $conn->query($sql, PDO::FETCH_ASSOC);
     }
+
+
 ?>
 
 <head>
@@ -21,7 +25,7 @@
 
 <div class="container">
     <h3 class="center">Produtos</h3>
-    <form method="GET">
+    <form method="POST">
         <div class="row">
             <div class="input-field col s12 m12 l12 xl12">
                 <input id="busca" name="busca" type="text" class="validate">
@@ -48,11 +52,11 @@
                         <img class="activator" src="<?= $linha['foto'] ?>">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><?= $linha['nome'] ?><i class="material-icons right">more_vert</i></span>
+                        <span class="card-title activator grey-text text-darken-4"><?= $linha['nome'] ?>(<?= $linha['categoria_nome'] ?>)<i class="material-icons right">more_vert</i></span>
                         <p><a href="">Ver Mais</a></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4"><?= $linha['nome'] ?><i class="material-icons right">close</i></span>
+                        <span class="card-title grey-text text-darken-4"><?= $linha['nome'] ?>(<?= $linha['categoria_nome'] ?>)<i class="material-icons right">close</i></span>
                         <p><?= $linha['descricao'] ?></p>
                     </div>
                 </div>

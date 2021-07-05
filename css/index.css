@@ -40,6 +40,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
 }
 
+/* Estilização dos LINK do Cadastro */
 #format_link_cadastro{
     margin-top: 10px;
 }
@@ -49,6 +50,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
 }
 
+/* Formatando Tabela */
 .format_table{
     margin-bottom: 20px;
 }
