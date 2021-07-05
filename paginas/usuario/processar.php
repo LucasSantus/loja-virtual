@@ -21,12 +21,37 @@
         try {
             $conn->beginTransaction();
             $stmt->execute($bind_param);
-            echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Usuário inserido no banco!</div>';
+            echo ' 
+            <div class="container">
+                <div class="row">
+                    <div class="alert card green lighten-4 green-text text-darken-4">
+                        <div class="card-content">
+                            <p><i class="material-icons">check_circle</i>Produto Inserido com Sucesso!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>';
             $conn->commit();
         } catch(PDOException $e) {
             $conn->rollback();
-            echo '<div class="msg-cadastro-contato msg-cadastro-erro">Não foi possível cadastrar o usuário -> ' . $e->getMessage() . '</div>';
+            echo '
+            <div class="container">
+                <div class="row">
+                    <div class="alert card red lighten-4 red-text text-darken-4">
+                        <div class="card-content">
+                            <p><i class="material-icons">report</i>Erro ao Inserir no Banco!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>';        
         }
+        ?>
+            <script>
+                setTimeout(function() {
+                    window.location.href = "?pg=inicio";
+                }, 3000);
+            </script>
+        <?php
     }
 ?>
 
@@ -35,7 +60,3 @@
         Processar | Loja Virtual
     </title>
 </head>
-
-<div id="btn-limpar-sessao">
-    <a href="?pg=inicio">Voltar</a>
-</div>

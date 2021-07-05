@@ -46,7 +46,7 @@
                             <li><a href="?pg=categoria/cadastrar">Categorias</a></li>
                             <li><a href="?pg=sobre">Sobre</a></li>
                             <li><a href="?pg=contato/contatos">Contato</a></li>
-                            <li><a href="?pg=login/limpar_sessao">Sair</a></li>
+                            <li><a href="?pg=login/limpar_sessao"><i class="material-icons right">logout</i>Logout</a></li>
                         <?php
                             }
                         ?>

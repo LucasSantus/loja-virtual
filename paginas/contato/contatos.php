@@ -4,7 +4,6 @@ $sql = "SELECT co.id, co.nome, co.telefone, co.email, co.mensagem, uf.sigla AS e
         INNER JOIN cidades ci ON ci.id = co.cidade_id 
         INNER JOIN estados uf ON uf.id = ci.estado_id
         ORDER BY co.id DESC";
-
 $result = $conn->query($sql, PDO::FETCH_ASSOC);
 ?>
 

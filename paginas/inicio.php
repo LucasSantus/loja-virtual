@@ -32,8 +32,17 @@
             <div class="col s12 m12 l2 xl2">
             <br>
                 <button class="waves-effect waves-light btn deep-orange">BUSCAR</button>
-            </div>  
+            </div>
         </div>
+        <?php
+            if(isset($_SESSION["nome"])){
+        ?>
+            <div class="center">
+                <a class="waves-effect waves-light btn deep-orange" href="?pg=produto/cadastrar">CADASTRAR</a>
+            </div>
+        <?php
+            }
+        ?>
     </form>
 </div>
 
@@ -43,17 +52,18 @@
     ?>
     <div class="row s12 m12 l12 xl12">
         <div class="col s12 m6 l4 xl4">
-            <div class="card small">
+            <div class="card medium">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="<?= $linha['foto'] ?>">
+                    <img class="activator" width="100%" height="100%" src="<?= $linha['foto'] ?>">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4"><?= $linha['nome'] ?>(<?= $linha['categoria_nome'] ?>)<i class="material-icons right">more_vert</i></span>
-                    <p><a href="">Ver Mais</a></p>
+                    <span class="card-title activator grey-text text-darken-4"><?= $linha['nome'] ?> [<?= $linha['categoria_nome'] ?>]<i class="material-icons right">more_vert</i></span>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4"><?= $linha['nome'] ?>(<?= $linha['categoria_nome'] ?>)<i class="material-icons right">close</i></span>
-                    <p><?= $linha['descricao'] ?></p>
+                    <span class="card-title grey-text text-darken-4"><?= $linha['nome'] ?><i class="material-icons right">close</i></span>
+                    <p><strong>Categoria:</strong><br> <?= $linha['categoria_nome'] ?></p>
+                    <p><strong>Descrição:</strong><br> <?= $linha['descricao'] ?></p>
+                    <p><strong>Link Imagem:</strong><br> <a target="blank" href="<?= $linha['foto'] ?>"><?= $linha['foto'] ?></a></p>
                 </div>
             </div>
         </div>
@@ -61,13 +71,4 @@
         }
     ?>
     </div>
-    <?php
-        if(isset($_SESSION["nome"])){
-    ?>
-        <div class="right">
-            <a class="waves-effect waves-light btn deep-orange" href="?pg=produto/cadastrar">CADASTRAR</a>
-        </div>
-    <?php
-        }
-    ?>
 </div>

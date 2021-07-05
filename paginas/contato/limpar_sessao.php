@@ -4,6 +4,6 @@
 
     mysqli_query($conn, $sql);
 
-    header('Location: ?pg=contato/formulario');
+    header('Location: ?pg=contato/form');
 
 ?>

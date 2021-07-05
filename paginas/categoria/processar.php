@@ -12,7 +12,6 @@ if(!empty($_POST)){
     
     try {
         $conn->beginTransaction();
-
         $stmt->execute($bind_param);
 
         echo ' 
@@ -25,14 +24,6 @@ if(!empty($_POST)){
                 </div>
             </div>
         </div>';
-
-        ?>
-            <script>
-                setTimeout(function() {
-                    window.location.href = "?pg=inicio";
-                }, 2000);
-            </script>
-        <?php
 
         $conn->commit();
 
@@ -50,14 +41,15 @@ if(!empty($_POST)){
             </div>
         </div>';
 
-        ?>
-            <script>
-                setTimeout(function() {
-                    window.location.href = "?pg=inicio";
-                }, 2000);
-            </script>
-        <?php
+
     }
+    ?>
+        <script>
+            setTimeout(function() {
+                window.location.href = "?pg=inicio";
+            }, 2000);
+        </script>
+    <?php
 }
 ?>
 

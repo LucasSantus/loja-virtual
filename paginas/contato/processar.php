@@ -49,8 +49,11 @@ if(!empty($_POST)){
     ?>
         <script>
             setTimeout(function() {
-                if($_POST["nome"]){
+                if(isset($_SESSION["nome"])){
                     window.location.href = "?pg=contato/contatos";
+                }
+                else{
+                    window.location.href = "?pg=inicio";
                 }
             }, 3000);
         </script>

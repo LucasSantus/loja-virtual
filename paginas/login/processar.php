@@ -15,11 +15,20 @@ if(!empty($_POST)){
         $_SESSION["id"] = $info['id'];
         header("Location: ?pg=area_restrita");
     }else{
-        echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
+        echo '
+        <div class="container">
+            <div class="row">
+                <div class="alert card red lighten-4 red-text text-darken-4">
+                    <div class="card-content">
+                        <p><i class="material-icons">report</i>Usuário Não Encontrado!</p>
+                    </div>
+                </div>
+            </div>
+        </div>';    
     }
 }
 else{
-    header("Location: ?pg=login/formulario");
+    header("Location: ?pg=login/form");
 }
 ?>
 

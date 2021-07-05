@@ -20,14 +20,40 @@ if(!empty($_POST)){
     try {
         $conn->beginTransaction();
         $stmt->execute($bind_param);
-        $last_id = $conn->lastInsertId();
-        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Registro ' . $last_id . ' inserido no banco!</div>';
+
+        echo ' 
+        <div class="container">
+            <div class="row">
+                <div class="alert card green lighten-4 green-text text-darken-4">
+                    <div class="card-content">
+                        <p><i class="material-icons">check_circle</i>Produto Inserido com Sucesso!</p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+        
         $conn->commit();
     } catch(PDOExecption $e) {
         $conn->rollback();
-        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Erro ao inserir registro no banco: ' . $e->getMessage() . '</div>';
-    }
 
+        echo '
+        <div class="container">
+            <div class="row">
+                <div class="alert card red lighten-4 red-text text-darken-4">
+                    <div class="card-content">
+                        <p><i class="material-icons">report</i>Erro ao Inserir no Banco!</p>
+                    </div>
+                </div>
+            </div>
+        </div>';    
+    }
+    ?>
+        <script>
+            setTimeout(function() {
+                window.location.href = "?pg=inicio";
+            }, 3000);
+        </script>
+    <?php
 }
 
 ?>
@@ -37,7 +63,3 @@ if(!empty($_POST)){
         Processar | Loja Virtual
     </title>
 </head>
-
-<div id="btn-limpar-sessao">
-    <a href="?pg=itens/cadastrar_itens">Voltar</a>
-</div>

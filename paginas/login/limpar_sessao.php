@@ -2,6 +2,6 @@
 
 unset($_SESSION["nome"]);
 
-header('Location: ?pg=login/formulario');
+header('Location: ?pg=login/form');
 
 ?>
