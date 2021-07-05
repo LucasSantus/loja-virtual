@@ -21,7 +21,7 @@
 
 <div class="container">
     <h3 class="center">Produtos</h3>
-    <form action="?pg=busca" method="GET">
+    <form method="GET">
         <div class="row">
             <div class="input-field col s12 m12 l12 xl12">
                 <input id="busca" name="busca" type="text" class="validate">
